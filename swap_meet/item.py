@@ -8,4 +8,6 @@ class Item:
             self.id = id
     def get_category(self):
         return "Item"
- 
+    #dunder str method to override str()
+    def __str__(self):
+        return f"An object of type Item with id {self.id}."
