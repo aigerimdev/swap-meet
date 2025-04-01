@@ -1,6 +1,6 @@
 import uuid
 class Clothing:
-    def __init__(self, id = None, fabric = None):
+    def __init__(self, id = None, fabric = None, condition = None):
         if id is None:
             self.id = uuid.uuid4().int 
         else:
@@ -9,6 +9,11 @@ class Clothing:
            self.fabric = "Unknown"
         else:
             self.fabric = fabric
+            
+        if condition is None:
+            self.condition = 0
+        else:
+            self.condition = condition
     def get_category(self):
         return "Clothing"    
     def __str__(self):

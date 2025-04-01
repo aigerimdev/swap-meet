@@ -1,6 +1,6 @@
 import uuid
 class Decor:
-    def __init__(self, id = None, width = None, length=None):
+    def __init__(self, id = None, width = None, length=None, condition = None):
         if id is None:
             self.id = uuid.uuid4().int 
         else:
@@ -15,6 +15,11 @@ class Decor:
             self.length = 0    
         else:
             self.length = length
+        
+        if condition is None:
+            self.condition = 0
+        else:
+            self.condition = condition
         
     def get_category(self):
         return "Decor"
