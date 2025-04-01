@@ -26,3 +26,11 @@ class Decor:
     
     def __str__(self):
         return f"An object of type Decor with id {self.id}. It takes up a {self.width} by {self.length} sized space."
+    
+    def condition_description(self):
+        if self.condition >= 0 and self.condition < 2:
+            return "heavily used"
+        if self.condition >= 2 and self.condition < 4:
+            return "fair"
+        else:
+            return "good"

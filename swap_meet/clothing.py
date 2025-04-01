@@ -18,3 +18,11 @@ class Clothing:
         return "Clothing"    
     def __str__(self):
         return f"An object of type Clothing with id {self.id}. It is made from {self.fabric} fabric."
+    
+    def condition_description(self):
+        if self.condition >= 0 and self.condition < 2:
+            return "heavily used"
+        if self.condition >= 2 and self.condition < 4:
+            return "fair"
+        else:
+            return "good"

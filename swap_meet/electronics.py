@@ -20,3 +20,11 @@ class Electronics:
     
     def __str__(self):
         return f"An object of type Electronics with id {self.id}. This is a {self.type} device."
+    
+    def condition_description(self):
+        if self.condition >= 0 and self.condition < 2:
+            return "heavily used"
+        if self.condition >= 2 and self.condition < 4:
+            return "fair"
+        else:
+            return "good"
