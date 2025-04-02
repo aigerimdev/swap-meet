@@ -7,10 +7,7 @@ class Item:
         else:
             self.id = id
         self.condition = condition if condition is not None else 0
-        # if condition is None:
-        #     self.condition = 0
-        # else:
-        #     self.condition = condition
+
            
     def get_category(self):
         return self.__class__.__name__

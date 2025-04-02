@@ -7,16 +7,13 @@ class Decor(Item):
         if width is None:
             self.width = 0
         else:
-            self.width = width
-        
+            self.width = width     
         if length is None:
             self.length = 0    
         else:
             self.length = length
         
-    # def get_category(self):
-    #     return "Decor"
-    
+
     def __str__(self):
         item_summary = super().__str__()
         decor_summary = f"It takes up a {self.width} by {self.length} sized space."
