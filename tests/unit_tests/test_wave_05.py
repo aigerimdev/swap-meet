@@ -139,3 +139,11 @@ def check_for_default_uuid_length_id(to_check):
 def check_category_and_custom_id(to_check, id, category):
     assert to_check.get_category() == category
     assert to_check.id == id
+
+
+# additional test
+def test_for_fair_condition_description():
+    items = [
+        Clothing(condition=3)
+    ]
+    assert items[0].condition_description() == "fair"
