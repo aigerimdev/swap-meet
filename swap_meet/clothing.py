@@ -6,7 +6,7 @@ class Clothing(Item):
     def __init__(self, id=None, fabric=None, condition=None):
         super().__init__(id, condition)
         if fabric is None:
-           self.fabric = "Unknown"
+            self.fabric = "Unknown"
         else:
             self.fabric = fabric
 

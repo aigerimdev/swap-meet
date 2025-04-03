@@ -8,7 +8,7 @@ class Electronics(Item):
             self.type = "Unknown"
         else:
             self.type = type
-   
+
     def __str__(self):
         item_summary = super().__str__()
         electronics_summary = f"This is a {self.type} device."
