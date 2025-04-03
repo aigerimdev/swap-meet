@@ -17,9 +17,13 @@ class Item:
         return f"An object of type {self.get_category()} with id {self.id}."
     
     def condition_description(self):
-        if self.condition >= 0 and self.condition < 2:
-            return "heavily used"
-        if self.condition >= 2 and self.condition < 4:
-            return "fair"
-        else:
-            return "good"
+        condition={
+            0: "bad",
+            1: "heavily used",
+            2: "used",
+            3: "fair",
+            4: "very good",
+            5: "like new"        
+        }
+        if self.condition in condition:
+            return condition[self.condition]
